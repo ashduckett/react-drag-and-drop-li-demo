@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import ItemList from './ItemList';
 
 function App() {
+  const listItems = [
+    {
+      id: 1,
+      text: 'Item 1'
+    },
+    {
+      id: 2,
+      text: 'Item 2'
+    },
+    {
+      id: 3,
+      text: 'Item 3'
+    },
+  ];
+  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ItemList items={listItems} />
     </div>
   );
 }
